@@ -4,6 +4,67 @@
     box-sizing: border-box;
 
 }
+
+/**********/ 
+/* HEADER */
+/**********/
+
+h1, h2, h3{
+    padding: 10px 0px 10px 10px;
+}
+#portada{
+    color:#cccccc
+}
+.portadaImg {
+    background-color: black;
+    background-image: url("./images/portada.jpeg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+}
+
+/**********/ 
+/* NAV */
+/**********/
+
+nav{
+    background-color: #505D41;
+    /* display:flex;
+    flex-direction: row;
+    justify-content: flex-end; */
+}
+
+.nav-li{
+    /* list-style: none;
+    margin-left: 10px;
+    padding: 10px; */
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+.nav-a{
+    /* padding: 10px; */
+    /* text-decoration: none; */
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+.nav-a:hover{
+    background-color: #617552;
+    color: #FFFFFF;
+}
+.nav-a:focus{
+    background-color: #617552;
+    border: 1 px solid #FFFFFF;
+}
+.nav-btn{
+    color: #FFFFFF;
+}
+
+/*********/
+/** BODY */
+/*********/
+
 body{
     background-color: #ACC29B;
     font-family: 'Roboto', sans-serif;
@@ -12,36 +73,6 @@ body{
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
 }
-h1, h2, h3{
-    padding: 10px 0px 10px 10px;
-}
-nav ul{
-    background-color: #505D41;
-    display:flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-nav li{
-    list-style: none;
-    margin-left: 10px;
-    padding: 12px;
-    color: #FFFFFF;
-    border-radius: 5px;
-}
-nav li a{
-    padding: 12px;
-    text-decoration: none;
-    color: #FFFFFF;
-    border-radius: 5px;
-}
-nav li a:hover{
-    background-color: #617552;
-}
-nav li a:focus{
-    background-color: #617552;
-    border: 1 px solid #FFFFFF;
-}
 section{
     margin: 30px;
     padding: 10px;
@@ -49,7 +80,7 @@ section{
 
 .sectionLeft{
     display:grid;
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 300px 1fr;
     grid-template-rows: 1fr 4fr;
     grid-template-areas: 
         "imagen title" 
@@ -57,7 +88,7 @@ section{
 }
 .sectionRight{
     display:grid;
-    grid-template-columns: 1fr 250px;
+    grid-template-columns: 1fr 300px;
     grid-template-rows: 1fr 4fr;
     grid-template-areas: 
         "title imagen" 
@@ -66,8 +97,7 @@ section{
 .sectionImg{
     justify-self: flex-start;
     grid-area: imagen;
-    height: 250px;
-    width: 250px;
+    width: 300px;
 }
 .sectionTitle{
     grid-area: title;
@@ -84,13 +114,42 @@ section{
     padding: 20px;
 }
 .cards{
-    background-image: url(./images/ef3-placeholder-image.jpeg);
-    background-size: cover;
-    background-position: center;
+    position:relative;
     padding: 5px;
 }
-.cards h3, p{
+.cardImg{
+    opacity: 1;
+    width: 100%;
+    background-size: cover;
+    background-position:top;
+    height: 100%;
+    transition: .5s ease;
+    backface-visibility: hidden;;
+}
+.cardContent{
+    position: absolute;;
+    top: 0px;
+    left: 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+    padding: 10px;
+}
+.cards h2, p{
     padding: 5px;
+    color: rgb(12, 12, 12);
+    font-size: 1rem;
+}
+.cards h2{
+    font-size: 1.5rem;
+}
+.cards:hover .cardImg {
+    opacity: 0.3;
+}
+  
+.cards:hover .cardContent {
+    visibility: visible;
+    opacity: 1;
 }
 .galeria{
     display: flex;
@@ -104,14 +163,11 @@ section{
     height: 150px;
     padding: 10px;
 }
-.imgPortada {
-    background-image: url("./images/ef3-placeholder-image.jpeg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 500px;
-}
+
+/**********/
+/* FOOTER */
+/**********/
+
 footer{
     background-color:  #617552;
     margin: 10px 0px 0px 0px;
@@ -128,6 +184,11 @@ footer redes img{
 footer p {
     padding: 10px;
 }
+
+/************/
+/* CONTACTO */
+/************/
+
 .contactanos-container{
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -190,4 +251,135 @@ textarea{
     background-color: #d1765a;
     outline: none;
     border: 2px solid  #755F58;
+}
+
+/************/
+/* MEDIA */
+/************/
+@media screen and (max-width: 1200px) {
+    .talleresContenedor{
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+}
+@media screen and (max-width: 768px){
+    .portadaContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr;
+        grid-template-areas: 
+            "left right"
+    }
+    .sectionLeft{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 3fr;
+        grid-template-areas: 
+            "imagen" 
+            "title"
+            "texto";
+        grid-area: left;
+    }
+    .sectionRight{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 3fr;
+        grid-template-areas: 
+            "imagen" 
+            "title"
+            "texto";
+        grid-area: right;
+    }
+    .sectionImg{
+        justify-self: flex-start;
+        grid-area: imagen;
+        width: 300px;
+    }
+    .portadaImg {
+        background-color: black;
+        background-image: url("./images/portada.jpeg");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 400px;
+    }
+    .talleresContenedor{
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+    .cards{
+        background-size: cover;
+        background-position: center;
+        padding: 5px;
+    }
+    .cards h2, p{
+        color: rgb(12, 12, 12);
+        padding: 5px;
+    }
+    .cards h2{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 567px){
+    .portadaContainer{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr;
+        grid-template-areas: 
+            "left"
+            "right"
+    }
+    .sectionLeft{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr;
+        grid-template-areas: 
+            "imagen" 
+            "title"
+            "texto";
+        grid-area: left;
+    }
+    .sectionRight{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr;
+        grid-template-areas: 
+            "imagen" 
+            "title"
+            "texto";
+        grid-area: right;
+    }
+    .portadaImg {
+        background-color: black;
+        background-image: url("./images/portada.jpeg");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 300px;
+    }
+    .talleresContenedor{
+        display:grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+    .cards{
+        background-size: cover;
+        background-position: center;
+        padding: 10px;
+    }
+    .cards h2, p{
+        color: rgb(12, 12, 12);
+        padding: 10px;
+    }
+    .cards h2{
+        font-size: 1.5rem;
+    }
 }
