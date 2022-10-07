@@ -1,0 +1,20 @@
+/**********/ 
+/* HEADER */
+/**********/
+
+h1, h2, h3{
+    padding: 10px 0px 10px 10px;
+    margin: 0px;
+}
+#portada{
+    color:#cccccc
+}
+.portadaImg {
+    background-color: black;
+    background-image: url("../images/portada/portada.jpeg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+}

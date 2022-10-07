@@ -1,0 +1,61 @@
+@media screen and (max-width: 768px){
+    .portadaContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr;
+        grid-template-areas: 
+            "left right"
+    }
+    .sectionLeft{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 3fr;
+        grid-template-areas: 
+            "imagen" 
+            "title"
+            "texto";
+        grid-area: left;
+    }
+    .sectionRight{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 3fr;
+        grid-template-areas: 
+            "imagen" 
+            "title"
+            "texto";
+        grid-area: right;
+    }
+    .sectionImg{
+        justify-self: flex-start;
+        grid-area: imagen;
+        width: 300px;
+    }
+    .portadaImg {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 400px;
+    }
+    .talleresContenedor{
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+    .cards{
+        background-size: cover;
+        background-position: center;
+    }
+    .cards h2, p{
+        padding: 5px;
+    }
+    .cards h2{
+        font-size: 1.2rem;
+    }
+
+    .img-container{
+        max-width: 310px;
+    }
+}

@@ -1,0 +1,397 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/**********/
+/* HEADER */
+/**********/
+h1, h2, h3 {
+  padding: 10px 0px 10px 10px;
+  margin: 0px; }
+
+#portada {
+  color: #cccccc; }
+
+.portadaImg {
+  background-color: black;
+  background-image: url("../images/portada/portada.jpeg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px; }
+
+/**********/
+/* NAV */
+/**********/
+nav {
+  background-color: #505D41;
+  /* display:flex;
+    flex-direction: row;
+    justify-content: flex-end; */ }
+
+.nav-li {
+  /* list-style: none;
+    margin-left: 10px;
+    padding: 10px; */
+  color: #FFFFFF;
+  border-radius: 5px; }
+
+.nav-a {
+  /* padding: 10px; */
+  /* text-decoration: none; */
+  color: #FFFFFF;
+  border-radius: 5px; }
+
+.nav-a:hover {
+  background-color: #617552;
+  color: #FFFFFF; }
+
+.nav-a:focus {
+  background-color: #617552;
+  border: 1 px solid #FFFFFF; }
+
+.nav-btn {
+  color: #FFFFFF; }
+
+/*********/
+/** BODY */
+/*********/
+body {
+  background-color: #ACC29B;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto; }
+
+section {
+  margin: 30px;
+  padding: 10px; }
+
+.sectionLeft {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 1fr 4fr;
+  grid-template-areas: "imagen title"  "imagen texto"; }
+
+.sectionRight {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  grid-template-rows: 1fr 4fr;
+  grid-template-areas: "title imagen"  "texto imagen"; }
+
+.sectionImg {
+  display: grid;
+  grid-area: imagen;
+  width: 300px; }
+  .sectionImg img {
+    width: 100%; }
+
+.sectionTitle {
+  grid-area: title;
+  padding: 15px; }
+
+.sectionText {
+  grid-area: texto;
+  padding: 15px; }
+
+.talleresContenedor {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px; }
+
+.cardImg {
+  opacity: 1;
+  width: 100%;
+  background-size: cover;
+  background-position: top;
+  height: 100%;
+  transition: .5s ease;
+  backface-visibility: hidden; }
+
+.cardContent {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .2s, visibility .2s;
+  padding: 10px; }
+
+.cards {
+  position: relative;
+  background-color: black; }
+  .cards h2 {
+    font-size: 1.5rem;
+    padding: 5px;
+    color: #c3c3c3; }
+  .cards p {
+    padding: 5px;
+    color: #c3c3c3;
+    font-size: 1rem; }
+  .cards:hover .cardImg, .cards:focus .cardImg {
+    opacity: 0.3; }
+  .cards:hover .cardContent, .cards:focus .cardContent {
+    visibility: visible;
+    opacity: 1; }
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 30px; }
+
+.img-container {
+  width: 96%;
+  max-width: 450px;
+  margin: 0 auto; }
+
+.experiencias {
+  width: 100%;
+  height: auto;
+  padding: 10px; }
+
+/**********/
+/* FOOTER */
+/**********/
+footer {
+  background-color: #617552;
+  margin: 10px 0px 0px 0px;
+  padding: 10px;
+  min-height: 100px;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: end; }
+
+footer redes img {
+  padding: 10px; }
+
+footer p {
+  padding: 10px; }
+
+/************/
+/* CONTACTO */
+/************/
+.contactanos-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr; }
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  justify-content: start; }
+
+.contact-container form {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+
+.info1, .info2, .comment, .subscription-container {
+  padding: 5px; }
+
+.subscription {
+  padding: 5px; }
+
+.info1 label, .subscription label {
+  margin: 0px 0px 0px 0px;
+  padding: 5px;
+  display: block; }
+
+.info1 input, .subscription-email {
+  display: block;
+  border-radius: 5px;
+  border: 1px solid grey;
+  min-width: 300px;
+  padding: 5px; }
+
+.info2 label {
+  padding: 5px;
+  margin: 5px; }
+
+.info2 legend {
+  padding: 5px;
+  margin: 0px; }
+
+textarea {
+  padding: 5px;
+  resize: none; }
+
+.subscription input {
+  margin: 0px 0px 7px 0px; }
+
+.form-button {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  color: #FFFFFF;
+  background-color: #755F58;
+  border: 2px solid  #755F58; }
+
+.form-button:hover {
+  color: #FFFFFF;
+  background-color: #d1765a; }
+
+.form-button:focus {
+  color: #FFFFFF;
+  background-color: #d1765a;
+  outline: none;
+  border: 2px solid  #755F58; }
+
+@media screen and (max-width: 1200px) {
+  .talleresContenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px; } }
+
+@media screen and (max-width: 768px) {
+  .portadaContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr;
+    grid-template-areas: "left right"; }
+  .sectionLeft {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr;
+    grid-template-areas: "imagen"  "title" "texto";
+    grid-area: left; }
+  .sectionRight {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr;
+    grid-template-areas: "imagen"  "title" "texto";
+    grid-area: right; }
+  .sectionImg {
+    justify-self: flex-start;
+    grid-area: imagen;
+    width: 300px; }
+  .portadaImg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px; }
+  .talleresContenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px; }
+  .cards {
+    background-size: cover;
+    background-position: center; }
+  .cards h2, p {
+    padding: 5px; }
+  .cards h2 {
+    font-size: 1.2rem; }
+  .img-container {
+    max-width: 310px; } }
+
+@media screen and (max-width: 567px) {
+  .portadaContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    grid-template-areas: "left" "right"; }
+  .sectionLeft {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr;
+    grid-template-areas: "imagen"  "title" "texto";
+    grid-area: left; }
+  .sectionRight {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr;
+    grid-template-areas: "imagen"  "title" "texto";
+    grid-area: right; }
+  .sectionImg {
+    display: block;
+    grid-area: imagen;
+    width: 300px; }
+    .sectionImg img {
+      width: 100%; }
+  .portadaImg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px; }
+  .talleresContenedor {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    padding: 20px; }
+  .cards {
+    background-size: cover;
+    background-position: center; }
+  .cards h2, p {
+    padding: 10px; }
+  .cards h2 {
+    font-size: 1.5rem; }
+  /* CONTACTO */
+  .contactanos-container {
+    display: grid;
+    grid-template-columns: 1fr; }
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    justify-content: start; }
+  .contact-container form {
+    display: grid;
+    grid-template-columns: 1fr; }
+  .comment {
+    max-width: 400px;
+    margin: 10px; }
+  .info1, .info2, .comment, .subscription {
+    padding: 10px; }
+  .info1 div, .info2 div, .subscription div {
+    margin: 0px 0px 0px 5px; }
+  .info1 label, .subscription label {
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+    display: block; }
+  .info1 input, .subscription-email {
+    display: block;
+    border-radius: 5px;
+    border: 1px solid grey;
+    min-width: 300px;
+    padding: 0px 0px 0px 10px; }
+  .info2 label {
+    padding: 5px;
+    margin: 0px; }
+  .info2 legend {
+    padding: 5px; }
+  .info2 input {
+    padding: 5px;
+    margin: 0px 0px 0px 5px;
+    width: 15px;
+    height: 15px; }
+  textarea {
+    padding: 5px;
+    resize: none;
+    width: 100%; }
+  .form-button {
+    padding: 5px;
+    margin: 0px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    color: #FFFFFF;
+    background-color: #755F58;
+    border: 2px solid  #755F58; }
+  .form-button:hover {
+    color: #FFFFFF;
+    background-color: #d1765a; }
+  .form-button:focus {
+    color: #FFFFFF;
+    background-color: #d1765a;
+    outline: none;
+    border: 2px solid  #755F58; }
+  .img-container {
+    max-width: 310px; } }
