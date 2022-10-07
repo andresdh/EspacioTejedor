@@ -1,0 +1,117 @@
+/*********/
+/** BODY */
+/*********/
+
+body{
+    background-color: #ACC29B;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+section{
+    margin: 30px;
+    padding: 10px;
+}
+
+.sectionLeft{
+    display:grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: 
+        "imagen title" 
+        "imagen texto";
+}
+.sectionRight{
+    display:grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: 
+        "title imagen" 
+        "texto imagen";
+}
+.sectionImg{
+    display: grid;
+    grid-area: imagen;
+    width: 300px;
+    img{
+        width: 100%;
+    }
+}
+.sectionTitle{
+    grid-area: title;
+    padding: 15px;
+}
+.sectionText{
+    grid-area: texto;
+    padding: 15px;
+}
+
+// TALLERES 
+.talleresContenedor{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+.cardImg{
+    opacity: 1;
+    width: 100%;
+    background-size: cover;
+    background-position:top;
+    height: 100%;
+    transition: .5s ease;
+    backface-visibility: hidden;;
+}
+.cardContent{
+    position: absolute;;
+    top: 0px;
+    left: 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+    padding: 10px;
+}
+.cards {
+    position:relative;
+    background-color: black;
+    h2{
+        font-size: 1.5rem;
+        padding: 5px;
+        color: rgb(195, 195, 195);
+    }
+    p {
+        padding: 5px;
+        color: rgb(195, 195, 195);
+        font-size: 1rem;
+    }
+    &:hover, &:focus{
+        .cardImg {
+            opacity: 0.3;
+        }
+        .cardContent {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+// Galeria Imagenes //
+.galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 30px;
+
+}
+.img-container{
+    width: 96%;
+    max-width: 450px;
+    margin: 0 auto; 
+}
+.experiencias{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}

@@ -1,0 +1,70 @@
+/************/
+/* CONTACTO */
+/************/
+
+.contactanos-container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.contact-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    justify-content: start;
+}
+.contact-container form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.info1, .info2, .comment, .subscription-container{
+    padding: 5px;
+}
+.subscription{
+    padding: 5px;
+}
+.info1 label, .subscription label {
+    margin: 0px 0px 0px 0px;
+    padding: 5px;
+    display: block;
+}
+.info1 input, .subscription-email {
+    display: block;
+    border-radius: 5px;
+    border: 1px solid grey;
+    min-width: 300px;
+    padding: 5px;
+}
+.info2 label{
+    padding: 5px;
+    margin: 5px;
+}
+.info2 legend {
+    padding: 5px;
+    margin:0px;
+}
+textarea{
+    padding: 5px;
+    resize: none;
+}
+.subscription input{
+    margin: 0px 0px 7px 0px;
+}
+.form-button{
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    color: #FFFFFF;
+    background-color: #755F58;
+    border: 2px solid  #755F58;
+}
+.form-button:hover {
+    color: #FFFFFF;
+    background-color: #d1765a;
+}
+.form-button:focus {
+    color: #FFFFFF;
+    background-color: #d1765a;
+    outline: none;
+    border: 2px solid  #755F58;
+}
