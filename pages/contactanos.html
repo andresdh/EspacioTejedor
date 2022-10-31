@@ -29,6 +29,7 @@
           <button class="navbar-toggler nav-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+          <span class="nav-span" style="visibility: visible">Espacio Tejedor</span>
           <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
             <ul class="navbar-nav nav-ul">
               <li class="nav-item nav-li">
@@ -52,7 +53,7 @@
       <div class="contactanos-container">
         <div class="contact-container">
           <h1 class="">Contactános</h1>
-          <h3 class="">Escribinos y en breve nos pondremos en contacto para asesorarte</h3>
+          <h2 class="">Escribinos y en breve nos pondremos en contacto para asesorarte</h2>
           <form action="">
             <div class="info1">
               <div>
@@ -72,41 +73,37 @@
               <div>
                 <legend>Me interesa:</legend>
                 <div>
-                  <input type="checkbox" id="cbox1" value="alquiler"> 
-                  <label for="cbox1">Alquilar el espacio para un evento</label>
+                  <label for="cbox1"><input type="checkbox" id="cbox1" value="alquiler"/> Alquilar el espacio para un evento</label>
                 </div>
                 <div>
-                  <input type="checkbox" id="cbox2" value="clases"> 
-                  <label for="cbox2">Tomar clases</label>
+                  <label for="cbox2"><input type="checkbox" id="cbox2" value="clases"/> Tomar clases</label>
                 </div>
                 <div>
-                  <input type="checkbox" id="cbox3" value="taller"> 
-                  <label for="cbox3">Participar de un taller</label>
+                  <label for="cbox3"><input type="checkbox" id="cbox3" value="taller"/>  Participar de un taller</label>
                 </div>
                 <div>
-                  <input type="checkbox" id="cbox4" value="novedades"> 
-                  <label for="cbox4">Recibir novedades</label>
+                  <label for="cbox4"><input type="checkbox" id="cbox4" value="novedades"/> Recibir novedades</label>
                 </div>
                 <div>
-                  <input type="checkbox" id="cbox5" value="staff"> 
-                  <label for="cbox5">Ser parte del staff</label>
+                  <label for="cbox5"><input type="checkbox" id="cbox5" value="staff"/> Ser parte del staff</label>
                 </div>
               </div>
             </div>
             <div class="comment">
               <div>
-                <textarea name="consulta" id="" cols="30" rows="10">Escribinos tu consulta</textarea>
+                <label for="txarea">Escribinos tu consulta:</label>
+                <textarea name="consulta" cols="30" rows="10" id="txarea"></textarea>
               </div>
               <input class="form-button" type="submit" value="Enviar">
             </div>
           </form>
         </div>
         <div class="subscription-container">
-          <h2>Recibí nuestro newslater</h2>
+          <h3>Recibí nuestro newslater</h3>
           <div class="subscription">
             <form action="">
               <div>
-                <label for="subscription">Email</label>
+                <label for="subscription">Email:</label>
                 <input type="email" name="subscription" id="subscription" placeholder="Escribe tu email" class="subscription-email">
               </div>
               <div>
@@ -117,14 +114,14 @@
         </div>
       </div>
     </main>
+    <footer>
+      <redes>
+        <img src="../icons/facebook.svg" alt="facebook" />
+        <img src="../icons/instagram.svg" alt="instagram" />
+        <img src="../icons/whatsapp.svg" alt="whatsapp" />
+        <img src="../icons/youtube.svg" alt="youtube" />
+      </redes>
+      <p>Parque Chacabuco - CABA</p>
+    </footer>
   </body>
-  <footer>
-    <redes>
-      <img src="../icons/facebook.svg" alt="facebook" />
-      <img src="../icons/instagram.svg" alt="instagram" />
-      <img src="../icons/whatsapp.svg" alt="whatsapp" />
-      <img src="../icons/youtube.svg" alt="youtube" />
-    </redes>
-    <p>Parque Chacabuco - CABA</p>
-  </footer>
 </html>
