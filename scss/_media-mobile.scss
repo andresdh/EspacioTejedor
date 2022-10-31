@@ -1,4 +1,5 @@
 @media screen and (max-width: 567px){
+    /***** PORTADA ****/
     .portadaContainer{
         display: grid;
         grid-template-columns: 1fr;
@@ -30,6 +31,7 @@
     .sectionImg{
         display: block;
         grid-area: imagen;
+        justify-self: center;
         width: 300px;
         img{
             width: 100%;
@@ -42,6 +44,7 @@
         background-size: cover;
         height: 300px;
     }
+    /*** TALLERES ***/
     .talleresContenedor{
         display:grid;
         grid-template-columns: repeat(1, 1fr);
@@ -58,84 +61,67 @@
     .cards h2{
         font-size: 1.5rem;
     }
-    /* CONTACTO */
+    /*** CONTACTO ***/
     .contactanos-container{
-        display: grid;
         grid-template-columns: 1fr;
     }
     .contact-container{
-        display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr;
-        justify-content: start;
+        form {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+            "info1"
+            "info2"
+            "comment";
+        }
     }
-    .contact-container form{
-        display: grid;
-        grid-template-columns: 1fr;
+    .info2{
+        label{
+            margin: 0px 0px 5px 15px;
+        }
     }
-    .comment{
-        max-width: 400px;
-        margin: 10px;
+    .comment {
+        textarea{
+            width: 100%;
+        }
+        input{
+            margin: 0px;
+        }
     }
-    .info1, .info2, .comment, .subscription{
-        padding: 10px;
-    }
-    .info1 div, .info2 div, .subscription div{
-        margin: 0px 0px 0px 5px;
-    }
-    .info1 label, .subscription label {
-        margin: 0px 0px 0px 0px;
-        padding: 0px;
-        display: block;
-    }
-    .info1 input, .subscription-email {
-        display: block;
-        border-radius: 5px;
-        border: 1px solid grey;
-        min-width: 300px;
-        padding: 0px 0px 0px 10px;
-    }
-    .info2 label{
-        padding: 5px;
-        margin: 0px;
-    }
-    .info2 legend {
-        padding: 5px;
-    }
-    .info2 input {
-        padding: 5px;
-        margin: 0px 0px 0px 5px;
-        width: 15px;
-        height: 15px;
-    }
-    textarea{
-        padding: 5px;
-        resize: none;
-        width: 100%;
+    .subscription-container{
+        margin-top: 10px;
     }
     .form-button{
-        padding: 5px;
-        margin: 0px;
+        min-width: 100%;
         border-radius: 5px;
         border: 1px solid grey;
         color: #FFFFFF;
         background-color: #755F58;
         border: 2px solid  #755F58;
-    }
-    .form-button:hover {
-        color: #FFFFFF;
-        background-color: #d1765a;
-    }
-    .form-button:focus {
-        color: #FFFFFF;
-        background-color: #d1765a;
-        outline: none;
-        border: 2px solid  #755F58;
+        &:hover{
+            color: #FFFFFF;
+            background-color: #d1765a;
+        }
+        &:focus {
+            color: #FFFFFF;
+            background-color: #d1765a;
+            outline: none;
+            border: 2px solid  #755F58;
+        }
     }
 
-    //GALERIA
+    /*** GALERIA ***/
 
     .img-container{
         max-width: 310px;
+    }
+
+    /*** NAV ***/
+    .nav-span{
+        color: rgba(255,255,255,0.75);
+        font: {
+            size: 1.5rem;
+            weight: 400;
+        }
     }
 }

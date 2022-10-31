@@ -3,68 +3,137 @@
 /************/
 
 .contactanos-container{
+    padding: 20px;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    column-gap: 10px;
+    grid-template-columns: 2fr 0.75fr;
 }
 .contact-container{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
     justify-content: start;
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "info1 info2"
+        "comment comment";
+    }
 }
-.contact-container form{
+.subscription-container{
+    padding: 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    max-height: 250px;
+    background:#828F71;
+    border-radius: 5px;
+    h3{
+        color:#0D0D0D;
+    }
 }
-.info1, .info2, .comment, .subscription-container{
+
+.info1{
     padding: 5px;
+    grid-area: info1;
+    label{
+        margin: 0px 0px 0px 0px;
+        padding: 5px;
+        display: block;
+    }
+    input{
+        display: block;
+        border-radius: 5px;
+        border: 1px solid grey;
+        min-width: 80%;
+        padding: 5px;
+        margin: 0px 0px 5px 0px;
+    }
 }
+
+.info2{
+    padding: 5px;
+    grid-area: info2;
+    label{
+        display: block;
+        padding-left: 15px;
+        text-indent: -15px;
+        padding: 5px;
+        margin: 0px 0px 5px 0px;
+        cursor: pointer;
+    }
+    legend {
+        padding: 5px;
+        margin:0px;
+    }
+    input{
+        width: 15px;
+        height: 15px;
+        padding: 0;
+        margin:0px 5px 0px 0px;
+        vertical-align: bottom;
+        position: relative;
+        top: -4px;
+        *overflow: hidden;
+    }
+}
+
+
+.comment {
+    padding: 5px;
+    grid-area: comment;
+    label{
+        margin: 0px 0px 0px 0px;
+        padding: 5px;
+        display: block;
+        
+    }
+    textarea{
+        padding: 5px;
+        resize: none;
+        width: 80%;
+    }
+    input{
+        padding: 5px;
+        margin: 5px;
+    }
+}
+
 .subscription{
     padding: 5px;
+    max-height: 500px;
+    label{
+        margin: 0px 0px 0px 0px;
+        padding: 5px;
+        display: block;
+        min-width: 100%;
+        color:#0D0D0D;
+    }
+    input{
+        margin: 0px 0px 7px 0px;
+        min-width: 100%;
+        display: block;
+        border-radius: 5px;
+        border: 1px solid grey;
+        padding: 5px;
+    }
 }
-.info1 label, .subscription label {
-    margin: 0px 0px 0px 0px;
-    padding: 5px;
-    display: block;
-}
-.info1 input, .subscription-email {
-    display: block;
-    border-radius: 5px;
-    border: 1px solid grey;
-    min-width: 300px;
-    padding: 5px;
-}
-.info2 label{
-    padding: 5px;
-    margin: 5px;
-}
-.info2 legend {
-    padding: 5px;
-    margin:0px;
-}
-textarea{
-    padding: 5px;
-    resize: none;
-}
-.subscription input{
-    margin: 0px 0px 7px 0px;
-}
+
 .form-button{
-    padding: 5px;
-    margin: 5px;
+    display: block;
     border-radius: 5px;
     border: 1px solid grey;
     color: #FFFFFF;
     background-color: #755F58;
     border: 2px solid  #755F58;
-}
-.form-button:hover {
-    color: #FFFFFF;
-    background-color: #d1765a;
-}
-.form-button:focus {
-    color: #FFFFFF;
-    background-color: #d1765a;
-    outline: none;
-    border: 2px solid  #755F58;
+    &:hover{
+        color: #FFFFFF;
+        background-color: #d1765a;
+    }
+    &:focus {
+        color: #FFFFFF;
+        background-color: #d1765a;
+        outline: none;
+        border: 2px solid  #755F58;
+    }
 }

@@ -9,6 +9,10 @@ body{
     display: grid;
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
+    color:#0D0D0D;
+    p{
+        margin-bottom: 0;
+    }
 }
 section{
     margin: 30px;
@@ -49,9 +53,13 @@ section{
 }
 
 // TALLERES 
+.span-msg{
+    display: block;
+    padding: 20px;
+}
 .talleresContenedor{
     display:grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 20px;
 }

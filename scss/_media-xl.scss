@@ -1,8 +1,12 @@
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 992px) {
     .talleresContenedor{
         display:grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
         padding: 20px;
+    }
+    /*** NAV ***/
+    .nav-span{
+        visibility: hidden;
     }
 }
